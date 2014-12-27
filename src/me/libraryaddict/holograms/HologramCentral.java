@@ -8,7 +8,6 @@ import java.util.Map.Entry;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
-import org.bukkit.craftbukkit.v1_7_R4.entity.CraftPlayer;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -126,9 +125,8 @@ public class HologramCentral implements Listener {
     }
 
     static boolean is1_8(Player player) {
-        if (!is1_8.containsKey(player.getName()))
-            is1_8.put(player.getName(), ((CraftPlayer) player).getHandle().playerConnection.networkManager.getVersion() >= 28);
-        return is1_8.get(player.getName());
+        // Spigot 1.8 server
+        return true;
     }
 
     static boolean isInUse(Hologram hologram) {
