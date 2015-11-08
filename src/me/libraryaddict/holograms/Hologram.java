@@ -555,13 +555,13 @@ public class Hologram {
     }
 
     public Hologram setUsingArmorStand() {
-        this.isUsingWitherSkull = true;
+        this.isUsingWitherSkull = false;
         // TODO Remake and resend packets
         return this;
     }
 
     public Hologram setUsingWitherSkull() {
-        this.isUsingWitherSkull = false;
+        this.isUsingWitherSkull = true;
         // TODO Remake and resend packets
         return this;
     }
